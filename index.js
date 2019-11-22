@@ -1,5 +1,9 @@
 function fetchBooks() {
-
+   fetch('https://anapioficeandfire.com/api/books') //eslint-disable-line
+     .then(response => response.json())
+     .then(elemets => {
+       renderBooks(elemets);
+     })
 }
 
 function renderBooks(json) {
